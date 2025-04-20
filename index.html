@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RedScan Academy | Ping</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+            padding: 50px;
+            transition: background-color 1s ease-in-out;
+        }
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+        }
+        h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 18px;
+            font-style: italic;
+        }
+        img {
+            width: 300px;
+            height: auto;
+            margin: 15px 0;
+        }
+        form {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            display: inline-block;
+        }
+        label, input, button {
+            margin: 10px;
+            font-size: 18px;
+        }
+        input {
+            padding: 8px;
+            border: none;
+            border-radius: 4px;
+            width: 200px;
+            background-color: #222;
+            color: white;
+        }
+        button {
+            background-color: #444;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #666;
+        }
+    </style>
+    <script>
+        function alternarCores() {
+            let cores = ["#000000", "#B50000"]; // Preto e vermelho
+            let indice = 0;
+
+            setInterval(() => {
+                document.body.style.backgroundColor = cores[indice];
+                indice = (indice + 1) % cores.length;
+            }, 10000); // Alterna a cada 10 segundos
+        }
+
+        window.onload = alternarCores;
+    </script>
+</head>
+<body>
+    <h1>RedScan Academy</h1>
+    
+    <!-- Inserindo a imagem -->
+    <img src="https://www.redscanacademy.com.br/wp-content/uploads/2025/02/Inserir_um_titulo__7_-removebg-preview-1-300x252.png" 
+         alt="Logo RedScan Academy">
+
+    <h2>Curso Red Team</h2>
+    <p>By 5M1TH</p>
+
+    <h3>Teste de Ping</h3>
+    <form action="ping.php" method="post">
+        <label for="host">Endereço ou IP:</label>
+        <input type="text" id="host" name="host" required>
+        <button type="submit">Ping!</button>
+    </form>
+</body>
+</html>
